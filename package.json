@@ -1,6 +1,9 @@
 {
   "name": "git-practice-nuxt",
   "version": "1.0.0",
+  "engines": {
+    "node": "10.15.3"
+  },
   "description": "Nuxt.js project for Git practice",
   "author": "Hisako135",
   "private": true,
