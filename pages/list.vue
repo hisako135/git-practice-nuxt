@@ -1,16 +1,16 @@
 <template>
   <section class="container">
-    <list :posts="postsData"/>
+    <media :posts="postsData"/>
   </section>
 </template>
 
 <script>
-import List from '~/components/List.vue'
+import Media from '~/components/Media.vue'
 import jsonData from '~/assets/json/data.json'
 
 export default {
   components: {
-    List
+    Media
   },
   computed: {
     postsData() {
