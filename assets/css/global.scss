@@ -1,0 +1,14 @@
+// Customize bootstrap media component
+.media-img {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex: .5;
+  height: 0;
+  padding-top: 40%;  
+  width: 100%;
+  > img {
+    display: none;
+  }
+}
+

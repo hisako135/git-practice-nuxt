@@ -5,13 +5,16 @@
         v-for="(post, index) in posts"
         :key="index"
         class="media my-4">
-        <img
-          :alt="post.filename"
-          :src="`img/${post.filename}`"
-          class="mr-3">
+        <div 
+          :style="`background-image:url(img/${post.filename}`"
+          class="media-img mr-3">
+          <img
+            :alt="post.filename"
+            :src="`img/${post.filename}`">
+        </div>
         <div class="media-body">
           <h5 class="mt-0 mb-1">{{ post.title }}</h5>
-          <p>{{ post.desc }}</p>
+          <p v-html="post.desc"/>
         </div>
       </li>
     </ul>
@@ -23,9 +26,7 @@ export default {
   props: {
     posts: {
       type: Object,
-      default: function() {
-        return {}
-      }
+      default: () => {}
     }
   }
 }
