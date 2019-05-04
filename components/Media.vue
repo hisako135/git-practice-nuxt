@@ -12,7 +12,7 @@
           :src="`img/${post.filename}`">
       </div>
       <div class="media-body">
-        <h5 class="mt-0 mb-1">{{ post.title }}</h5>
+        <h5 class="mt-0 mb-1 font-weight-bold">{{ post.title }}</h5>
         <p v-html="post.desc"/>
       </div>
     </li>
@@ -31,16 +31,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import './node_modules/bootstrap/scss/functions';
+@import './node_modules/bootstrap/scss/variables';
+@import './node_modules/bootstrap/scss/mixins';
+
 .media-img {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  flex: 0.5;
+  flex: 0.2;
   height: 0;
-  padding-top: 40%;
+  padding-top: 20%;
   width: 100%;
+  @include media-breakpoint-down(md) {
+    flex: 0.4;
+    padding-top: 40%;
+  }
   > img {
-    display: none;
+    opacity: 0;
   }
 }
 </style>

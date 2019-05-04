@@ -20,15 +20,12 @@
   </header>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import './node_modules/bootstrap/scss/functions';
 @import './node_modules/bootstrap/scss/variables';
-@import './node_modules/bootstrap/scss/mixins';
 
 .navbar-light .navbar-nav .nav-link {
-  @include hover {
-    color: $teal;
-  }
+  &:hover,
   &.nuxt-link-active {
     color: $teal;
   }
